@@ -1,0 +1,146 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body { 
+  /*background:url(../images/bg.gif) repeat-x #f8f8f8; */
+
+  color:#d7d7d7; 
+  font-family:"Belle","Comic Sans MS", cursive; 
+  font-size:25px; 
+  line-height:27px;
+}
+
+#wrapper{
+    position:relative; 
+    width:960px; 
+    margin:0 auto; 
+    padding-top:75px;
+}
+
+#blackboardPlaceholder { 
+  background:url(../images/bb.jpg) no-repeat; 
+  width:924px; 
+  height:599px; 
+  margin:0 auto; 
+  padding:14px 0 75px 14px; 
+  cursor:crosshair; 
+}
+
+#drawingCanvas { 
+   position:absolute; 
+   border:none; 
+   color:#FFF; 
+   overflow:hidden; 
+   background-color:transparent; 
+ } 
+
+#tempCanvas { 
+	position: absolute; 
+	width:897px; 
+	height:532px; 
+	overflow:hidden; 
+}
+
+.noscript { padding:50px 30px 0 40px; width:820px; } 
+#selector { 
+ position:absolute; 
+ z-index:99999; 
+ margin-top:-30px; 
+ } 
+select { 
+ font-family:Verdana, Geneva, sans-serif; 
+ font-size:12px; 
+ background-color:#EAEAEA; 
+ }
+
+
+ #redChalk_button { cursor:pointer; position:absolute; z-index:99999; top:620px; left:160px; } 
+ #greenChalk_button { cursor:pointer; position:absolute; z-index:99999; top:620px; left:400px; } 
+ #blueChalk_button { cursor:pointer; position:absolute; z-index:99999; top:620px; left:480px; } 
+ #yellowChalk_button { cursor:pointer; position:absolute; z-index:99999; top:620px; left:320px; } 
+ #orangeChalk_button { cursor:pointer; position:absolute; z-index:99999; top:620px; left:240px; } 
+ #pinkChalk_button { cursor:pointer; position:absolute; z-index:99999; top:620px; left:560px; } 
+ #whiteChalk_button { cursor:pointer; position:absolute; z-index:99999; top:620px; left:80px; } 
+
+ #eraser { 
+ position:absolute; 
+ background:url(../images/eeee.jpg) no-repeat; 
+ left: 737px; 
+ top: 620px; 
+ width: 139px; 
+ height: 67px; 
+ z-index:99999; 
+ cursor:pointer; 
+ }
+
+
+ #plus-minus {
+  background: url(../images/bbbbbb.jfif) no-repeat;
+  width:42px; 
+ height:31px; 
+ position:absolute; 
+ top:420px; 
+ left:-17px; 
+ z-index:0; 
+ padding:8px 0 0 7px;
+  
+
+ }
+
+
+ #stroke-subtract { 
+ /*position:absolute; */
+ top:420px; 
+ left:-13px; 
+ /*z-index:999999;*/
+ cursor:pointer; 
+ } 
+
+#stroke-add { 
+  /*position:absolute;*/
+   top:420px; 
+   left:5px; 
+   /*z-index:999999;*/
+   cursor:pointer; 
+   } 
+
+ #strokeWeight { 
+ background:url(../images/stroke-style.png) no-repeat; 
+ width:43px; 
+ height:153px; 
+ position:absolute; 
+ top:456px; 
+ left:-18px; 
+ z-index:1; 
+ padding:8px 0 0 7px; 
+ } 
+
+.stroke { cursor:pointer; margin-bottom:3px; }
+
+
+#saveWrapper { position:absolute; right:0px; } 
+#convertpngbtn { 
+   float:right; 
+   margin-right:40px; 
+   margin-top:-10px; 
+   position:relative; 
+   z-index:9999; 
+   cursor:pointer; 
+   overflow:hidden; 
+   } 
+#textdownload { 
+ display:none; 
+ position:absolute; 
+ font-family:Verdana, Geneva, sans-serif; 
+ color:#000; 
+ font-size:10px; 
+ float:right; 
+ margin-top:-10px; 
+ right:91px; 
+ width:250px; 
+ overflow:hidden; 
+ }
+
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> White-Board</title>
+	<!--<link rel="stylesheet" type="text/javascript" href="https://cdn.jsdelivr.net/npm/canvas2image@1.0.5/canvas2image.min.js">-->
+	<link rel="stylesheet" type="text/css" href="CSS/style.css" /> 
+	<meta name="viewport" content="width = device-width , initial-scale=1">
+	<script type="text/javascript" src="JS/canvas.js"></script> 
+	<script src="https://cdn.jsdelivr.net/npm/js-base64@3.5.2/base64.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/canvas2image@1.0.5/canvas2image.min.js"></script>
+
+</head>
+<body>
+	<div id="wrapper">
+
+	<div id="blackboardPlaceholder">
+		<p><!-- Tool Selector -->
+		<select name="selector" id="selector"> 
+		<option value="chalk">Chalk</option> 
+		<option value="line">Line</option> 
+		<option value="rect">Rectangle</option> 
+		</select> 
+		</p>
+
+		<canvas id="drawingCanvas" height="532" width="897"> 
+			<p>We're sorry, this web application is currently not supported with your browser. Please use an alternate browser or download a supported <br />browser. Supported browsers: <a href="http://www.google.com/chrome">Google Chrome</a>, <a href="http://www.opera.com">Opera</a>, <a href="http://www.mozilla.com">Firefox</a>, <a href="http://www.apple.com/safari">Safari</a>, <br />and <a href="http://www.konqueror.org">Konqueror</a>. Also make sure your JavaScript is enabled.</p> 
+		</canvas>
+	  
+		<!-- Chalk Pieces -->
+		<div id="whiteChalk_button"> 
+			<img src="images/white.png" width="71" height="17" onclick="context.strokeStyle = '#FFFFFF';" /> 
+        </div> 
+        <div id="redChalk_button"> 
+			<img src="images/red.png" width="71" height="17" onclick="context.strokeStyle = '#F00000';" /> 
+		</div> 
+		<div id="orangeChalk_button"> 
+			<img src="images/orange.png" width="71" height="17" onclick="context.strokeStyle = '#ff9600';" /> 
+		</div> 
+		<div id="yellowChalk_button"> 
+			<img src="images/yellow.png" width="71" height="17" onclick="context.strokeStyle = '#fff600';" /> 
+		</div> 
+		<div id="greenChalk_button"> 
+			<img src="images/green.png" width="71" height="17" onclick="context.strokeStyle = '#48ff00';" /> 
+		</div> 
+		<div id="blueChalk_button"> 
+			<img src="images/blue.png" width="71" height="17" onclick="context.strokeStyle = '#001eff';" /> 
+		</div> 
+		<div id="pinkChalk_button"> 
+			<img src="images/pink.png" width="71" height="17" onclick="context.strokeStyle = '#ff00d2';" /> 
+		</div> 
+		  
+	</div>
+
+	<!-- Toggle Stroke Weight -->
+	<div id = "plus-minus">
+       <img src="images/min.jfif" width="16" height="16" id="stroke-subtract" title="Decrease Stroke" onclick="context.lineWidth--;" /> 
+       <img src="images/plu.png" width="16" height="16" id="stroke-add" title="Increase Stroke" onclick="context.lineWidth++;" /> 
+    </div>
+  
+<!-- Stroke Weight Panel -->
+    <div id="strokeWeight"> 
+    <img src="images/stroke1.png" alt="1.0" class="stroke" width="30" height="32" onclick="context.lineWidth = '1.0';" /> 
+    <img src="images/stroke2.png" alt="4.0" class="stroke" width="30" height="32" onclick="context.lineWidth = '4.0';" /> 
+    <img src="images/stroke3.png" alt="8.0" class="stroke" width="30" height="32" onclick="context.lineWidth = '8.0';" /> 
+    <img src="images/stroke4.png" alt="11.0" class="stroke" width="30" height="32" onclick="context.lineWidth = '11.0';" /> 
+    </div>
+    <div id="eraser" onclick="context.strokeStyle = '#424242'; context.lineWidth = '22';"></div>
+</div>
+
+     <div id="saveWrapper"> 
+     <div id="save"> 
+     	<img src="images/save.jpg" alt="Save Image" width="16" height="16" id="convertpngbtn" title="Save Image" /> 
+	</div> 
+	<div id="textdownload"> 
+ 		Right click the image to download. 
+ 		<img src="images/cross.png" alt="Cancel" width="16" height="16" id="resetbtn" title="Continue Drawing" /> 
+	</div> 
+	</div>
+</body>
+</html>
+
+
+
+
