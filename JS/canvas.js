@@ -19,7 +19,7 @@ canvaso = document.getElementById('drawingCanvas');
    alert('Error! No canvas.getContext!'); 
    return; 
    } 
-// Create 2d canvas. 
+// Creation of 2d canvas. 
    contexto = canvaso.getContext('2d'); 
    if (!contexto) { 
    alert('Error! Failed to getContext!'); 
@@ -32,19 +32,19 @@ canvaso = document.getElementById('drawingCanvas');
    alert('Error! Cannot create a new canvas element!'); 
    return; 
    } 
- canvas.id     = 'tempCanvas'; 
+   canvas.id     = 'tempCanvas'; 
    canvas.width  = canvaso.width; 
    canvas.height = canvaso.height; 
    container.appendChild(canvas); 
-context = canvas.getContext('2d'); 
+   context = canvas.getContext('2d'); 
    context.strokeStyle = "#FFFFFF";// Default line color. 
    context.lineWidth = 1.0;// Default stroke weight. 
   
-   // Fill transparent canvas with dark grey (So we can use the color to erase). 
+   // Fill transparent canvas with dark grey. 
    context.fillStyle = "#424242"; 
    context.fillRect(0,0,897,532);//Top, Left, Width, Height of canvas.
 
-   // Create a select field with our tools. 
+   // Creation of select field with tools. 
  var tool_select = document.getElementById('selector'); 
  if (!tool_select) { 
  alert('Error! Failed to get the select element!'); 
@@ -52,7 +52,7 @@ context = canvas.getContext('2d');
  } 
  tool_select.addEventListener('change', ev_tool_change, false); 
   
- // Activate the default tool (chalk). 
+ // Activation of default tool (chalk). 
  if (tools[tool_default]) { 
  tool = new tools[tool_default](); 
  tool_select.value = tool_default; 
@@ -82,7 +82,7 @@ context = canvas.getContext('2d');
    tool = new tools[this.value](); 
    } 
    } 
-// Create the temporary canvas on top of the canvas, which is cleared each time the user draws. 
+// Creation of temporary canvas on top of the canvas, which is cleared each time the user draws. 
    function img_update () { 
    contexto.drawImage(canvas, 0, 0); 
    context.clearRect(0, 0, canvas.width, canvas.height); 
@@ -138,7 +138,7 @@ if (!w || !h) {
    } 
    context.strokeRect(x, y, w, h); 
    }; 
-   // Now when you select the rectangle tool, you can draw rectangles. 
+   // selection of the rectangle tool,for drawing rectangles. 
    this.mouseup = function (ev) { 
    if (tool.started) { 
    tool.mousemove(ev); 
@@ -163,14 +163,14 @@ if (!w || !h) {
  return; 
  } 
  context.clearRect(0, 0, canvas.width, canvas.height); 
- // Begin the line. 
+ // Beginning of line. 
  context.beginPath(); 
  context.moveTo(tool.x0, tool.y0); 
  context.lineTo(ev._x,   ev._y); 
  context.stroke(); 
  context.closePath(); 
  }; 
- // Now you can draw lines when the line tool is seletcted. 
+ // Now drawing of lines when the line tool is seletcted. 
  this.mouseup = function (ev) { 
  if (tool.started) { 
  tool.mousemove(ev); 
@@ -202,7 +202,7 @@ window.onload = function() {
       document.getElementById('textdownload').style.display = "none";
    }
 
-
+// convert canvas
    function convertCanvas(ss){
       if(ss == "PNG")
          var oImg = Canvas2Image.saveAsPNG(oCanvas,true);
@@ -223,7 +223,7 @@ window.onload = function() {
    }
 
 
-
+// save canvas
    function saveCanvas(oCanvas,ss){
       if(ss == "PNG")
          var oImg = Canvas2Image.saveAsPNG(oCanvas,true);
